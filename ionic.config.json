@@ -1,0 +1,7 @@
+{
+  "name": "E_NILAM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
