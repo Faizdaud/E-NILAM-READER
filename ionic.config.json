@@ -1,0 +1,7 @@
+{
+  "name": "basic-frontend2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
