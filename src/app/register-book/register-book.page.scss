@@ -1,0 +1,42 @@
+ion-header{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(37, 108, 40);
+    padding: 1em 0 0.5em 0;
+    border-radius: 0 0 15px 15px ;
+    box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    color: aliceblue;
+    z-index: 3;
+  }
+
+ion-content{
+    // --ion-background-color: white !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .formContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        padding: 25% 0;
+
+        span{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            input{
+                border-radius: 7px;
+                padding: 0.3em;
+            }
+        }
+        button{
+            padding: 1em;
+            border-radius: 15px;
+            background-color: green;
+            color: white;
+        }
+    }
+  }

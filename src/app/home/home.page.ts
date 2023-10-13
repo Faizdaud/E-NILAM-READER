@@ -9,12 +9,8 @@ export class HomePage {
 
   constructor(private router: Router) {}
 
-  // navigateTo(){
-    // this._navigateTo('login');
-  // }
-  testFunc(){
-    console.log("Test Function Called");
-    this.router.navigate(['login'])
+  navigateTo(){
+    this.router.navigate(['tabs/book-details']);
   }
 
 }

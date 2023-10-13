@@ -1,11 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-
 <ion-content>
-  
+  <div class="body">
+    <div class="title">
+      <h1>E-NILAM</h1>
+      <img class="loginProfile" src="assets/img/profilePicture.jpg" alt="loginProfile">
+    </div>  
+    <div class="formContainer">
+      <span>
+        <label for="username">username</label>
+        <input type="text">
+      </span>
+      <span>
+        <label for="password">password</label>
+        <input type="password">
+      </span>
+      <button (click)="navigateTo()" >Login</button>
+    </div>
+  </div>
 </ion-content>
 
