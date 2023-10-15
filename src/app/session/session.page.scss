@@ -1,0 +1,47 @@
+ion-header{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(37, 108, 40);
+    padding: 1em 0 0.5em 0;
+    border-radius: 0 0 15px 15px ;
+    position: relative;
+    color: aliceblue;
+}
+// *{
+//     color: black;
+// }
+ion-content{
+    // --ion-background-color: whitesmoke !important;
+    p,h1{
+        margin:0;
+        padding: 0;
+    }
+    .bookDescContainer{
+        padding: 0 1.5em 2em 1.5em;
+        text-align: justify;
+        // padding: 0em 1em 2em 0em;
+    }
+    .bookContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // height: 40%;
+        width: 100%;
+        padding: 2em 0 2em 0;
+        gap: 1em;
+        // padding: 0 1em 3em 1em;
+
+        .btn-start-session{
+            padding: 1em;
+            border-radius: 15px;
+            background-color: green;
+            color: white;
+        }
+
+        .bookProfile{
+            width: 150px;
+            border: solid 2px rgb(66, 201, 66);
+        }
+    }
+}

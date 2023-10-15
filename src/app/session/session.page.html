@@ -1,0 +1,19 @@
+<ion-header>
+  <h1>Session</h1>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div class="bookContainer">
+  <h1>{{ formatTime(elapsedTime) }}</h1>
+  <ion-card>
+    <!-- <ion-card-header>
+      Elapsed Time: {{ formatTime(elapsedTime) }}
+    </ion-card-header> -->
+    <ion-card-content>
+      <!-- <ion-button (click)="startStopwatch()" expand="full" [disabled]="stopwatchRunning">Start</ion-button> -->
+      <ion-button (click)="stopStopwatch()" expand="full" [disabled]="!stopwatchRunning">End Session</ion-button>
+      <!-- <ion-button (click)="resetStopwatch()" expand="full" [disabled]="!stopwatchRunning && elapsedTime === 0">Reset</ion-button> -->
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
