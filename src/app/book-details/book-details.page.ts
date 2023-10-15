@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router'
+import{ Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-book-details',
@@ -8,10 +9,15 @@ import { Router} from '@angular/router'
 })
 export class BookDetailsPage {
 
-  constructor(private router: Router) {}
+  constructor(
+    public router: Router
+  ) { }
 
-  navigateTo(){
-    this.router.navigate(['tabs/start-session']);
+  ngOnInit() {
+  }
+
+  startSession(){
+    this.router.navigate(['/session'])
   }
 
 }
