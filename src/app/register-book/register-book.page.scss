@@ -10,6 +10,11 @@ ion-header{
     z-index: 3;
   }
 
+ion-toolbar{
+    background-color: rgb(37, 108, 40);
+
+}
+
 ion-content{
     // --ion-background-color: white !important;
     display: flex;

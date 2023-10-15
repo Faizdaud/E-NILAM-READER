@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{ Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 
 @Component({
@@ -10,7 +11,8 @@ import{ Router } from '@angular/router';
 export class BookDetailsPage implements OnInit {
 
   constructor(
-    public router: Router
+    public router: Router,
+    public navCtrl:NavController
   ) { }
 
   ngOnInit() {
@@ -18,6 +20,10 @@ export class BookDetailsPage implements OnInit {
 
   startSession(){
     this.router.navigate(['/session'])
+  }
+
+  goBack() {
+    this.navCtrl.back(); // Navigate back to the previous page
   }
 
 }

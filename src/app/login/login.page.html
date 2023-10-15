@@ -4,7 +4,7 @@
       <h1>E-NILAM</h1>
       <img class="loginProfile" src="assets/img/profilePicture.jpg" alt="loginProfile">
     </div>  
-    <div class="formContainer">
+    <!-- <div class="formContainer">
       <span>
         <label for="username">username</label>
         <input type="text">
@@ -13,8 +13,19 @@
         <label for="password">password</label>
         <input type="password">
       </span>
-      <button (click)="navigateTo()" >Login</button>
-    </div>
+      <button (click)="login()" >Login</button>
+    </div> -->
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </ion-item>
+      <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Login</ion-button>
+    </form>
   </div>
 </ion-content>
 

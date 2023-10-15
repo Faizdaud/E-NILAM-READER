@@ -1,5 +1,13 @@
-<ion-header>
+<!-- <ion-header>
     <h1>Book</h1>
+</ion-header> -->
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-button (click)="goBack()">
+      <ion-icon slot="icon-only" name="home"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title class="ion-text-center">Book</ion-title>
 </ion-header>
 
 <ion-content [fullscreen]="true">
