@@ -21,6 +21,10 @@ const routes: Routes = [
         path: 'register-book',
         loadChildren: () => import('../register-book/register-book.module').then( m => m.RegisterBookPageModule)
       },
+      {
+        path: 'start-session',
+        loadChildren: () => import('../start-session/start-session.module').then( m => m.StartSessionPageModule)
+      },
     ]
   }
 ];
