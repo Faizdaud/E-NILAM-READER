@@ -5,7 +5,7 @@ ion-content{
         display: flex;
         flex-direction: column;
         gap: 2em;
-        padding: 60% 0;
+        padding: 55% 0;
 
         .title{
             display: flex;
@@ -23,18 +23,22 @@ ion-content{
         }
         .formContainer{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             gap: 20px;
+            justify-content: center;
     
             span{
                 display: flex;
                 gap: 20px;
+                flex-direction: column;
                 align-items: center;
     
                 input{
                     border-radius: 7px;
-                    padding: 0.1em 0.6em;
+                    padding: 0.3em 0.6em;
+                    background-color: aliceblue;
+                    color: black;
     
                 }
             }

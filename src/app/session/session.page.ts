@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import{ Router } from '@angular/router';
+
 @Component({
   selector: 'app-session',
   templateUrl: './session.page.html',
@@ -10,7 +12,9 @@ export class SessionPage implements OnInit {
   stopwatchRunning: boolean = false;
   stopwatchInterval: any;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -28,6 +32,7 @@ export class SessionPage implements OnInit {
   stopStopwatch() {
     clearInterval(this.stopwatchInterval);
     this.stopwatchRunning = false;
+    this.router.navigate(['tabs/home'])
   }
 
   resetStopwatch() {
@@ -42,6 +47,6 @@ export class SessionPage implements OnInit {
     const seconds = Math.floor((time % 60000) / 1000);
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   }
-  
+  // amik last duration masuk firebase
 
 }

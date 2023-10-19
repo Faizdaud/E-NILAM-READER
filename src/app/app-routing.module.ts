@@ -30,7 +30,15 @@ const routes: Routes = [
   {
     path: 'session',
     loadChildren: () => import('./session/session.module').then( m => m.SessionPageModule)
+  },  {
+    path: 'lights',
+    loadChildren: () => import('./lights/lights.module').then( m => m.LightsPageModule)
   },
+  {
+    path: 'testfirebase',
+    loadChildren: () => import('./testfirebase/testfirebase.module').then( m => m.TestfirebasePageModule)
+  },
+
 ];
 
 @NgModule({

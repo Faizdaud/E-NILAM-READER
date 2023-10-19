@@ -1,0 +1,22 @@
+ion-header{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(37, 108, 40);
+    padding: 1em 0 0.5em 0;
+    border-radius: 0 0 15px 15px ;
+    box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    // color: aliceblue;
+    z-index: 3;
+  }
+  ion-content{
+    h3{
+        text-align: center;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+  }

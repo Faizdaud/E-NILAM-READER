@@ -1,10 +1,10 @@
 <ion-content>
   <div class="body">
     <div class="title">
-      <h1>E-NILAM</h1>
-      <img class="loginProfile" src="assets/img/profilePicture.jpg" alt="loginProfile">
+      <h1 style="font-size: 2em;">E-NILAM</h1>
+      <ion-icon style="font-size: 7em;" name="person-circle-outline"></ion-icon>
     </div>  
-    <div class="formContainer">
+    <!-- <div class="formContainer">
       <span>
         <label for="username">username</label>
         <input type="text">
@@ -14,7 +14,31 @@
         <input type="password">
       </span>
       <button (click)="navigateTo()" >Login</button>
-    </div>
+    </div> -->
+    <!-- <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </ion-item>
+      <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Login</ion-button>
+    </form> -->
+    <form class="formContainer" [formGroup]="loginForm" (ngSubmit)="login()">
+      <!-- <span> -->
+        <!-- <label>Email</label>
+        <label>Password</label> -->
+      <!-- </span> -->
+      <span>
+        <input placeholder="email" type="email" formControlName="email">
+        <input placeholder="password" type="password" formControlName="password">
+        <button expand="full" type="submit" [disabled]="loginForm.invalid">Login</button>
+      </span>
+      
+    </form>
+
   </div>
 </ion-content>
 

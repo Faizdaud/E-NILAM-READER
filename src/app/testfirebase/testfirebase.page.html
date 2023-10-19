@@ -1,0 +1,32 @@
+<ion-header>
+  <h1>Register</h1>
+</ion-header>
+<!--  -->
+<!-- <ion-header>
+  <ion-buttons slot="start">
+    <ion-button (click)="backTo()">
+      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Register</ion-title>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <div class="formContainer">
+    <h1>Register Book</h1>
+    <span>
+      <label for="">username</label>
+      <input [(ngModel)]="user.userId" name="isbn" type="text">
+    </span>
+    <span>
+      <label for="">Book Name</label>
+      <input [(ngModel)]="user.book.bookName" name="name" type="text">
+    </span>
+    <span>
+      <label for="">lastpage</label>
+      <input [(ngModel)]="user.book.lastpage" name="author" type="text">
+    </span>
+    <button (click)="registerBook()">Register</button>
+  </div>
+
+</ion-content>

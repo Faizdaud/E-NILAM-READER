@@ -22,8 +22,8 @@ const routes: Routes = [
         loadChildren: () => import('../register-book/register-book.module').then( m => m.RegisterBookPageModule)
       },
       {
-        path: 'session',
-        loadChildren: () => import('../session/session.module').then( m => m.SessionPageModule)
+        path: 'lights',
+        loadChildren: () => import('../lights/lights.module').then( m => m.LightsPageModule)
       },
     ]
   }
