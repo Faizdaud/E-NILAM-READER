@@ -5,7 +5,7 @@ ion-header{
   padding: 1em 0 0.5em 0;
   border-radius: 0 0 15px 15px ;
   box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.2); 
-  position: relative;
+  position: absolute;
   // color: aliceblue;
   z-index: 3;
 }
@@ -19,33 +19,65 @@ ion-content{
   // --ion-background-color: white !important;
   .statisticContainer{
     position: relative;
-    z-index: 2;
-    bottom: 1.4em;
     height: 40%;
     border-radius:20px ;
     box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.2); 
-    width:100% ;
+    width:100%;
+    display: flex;
+    align-items:center;
+    justify-content: end;
+    flex-direction: column;
     background-color: whitesmoke;
     
+    .statisticStreak{
+      color: black;
+      display: flex;
+      flex-direction: row;
+      gap: 1em;
+      height: 4em;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      span{
+        font-size: 20px;
+        border: solid 5px rgb(255, 66, 66);
+        padding: 0.2em;
+        border-radius: 100%;
+        width: 2em; height: 2em;
+        text-align: center;
+      }
+    }
   }
-  
+
   .listOfBooksContainer{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+
     margin:0 1em 0 1em ;
-    justify-content: space-evenly;
-    gap: 10px;
     padding: 2em 1em;
-  }
+    }
+
   .bookContainer{
     display: flex;
     flex-direction: column;
     // color: black;
+    align-items: start;
     gap: 10px;
+
+    span{
+      display: flex;
+      flex-direction: column;
+      gap: 0.4em;
+      width: 100%;
+      justify-content: start;
+    }
   }
   .bookProfile{
-    width: 150px;
+    width: 100%;
     border: solid 2px rgb(66, 201, 66);
 }
 }

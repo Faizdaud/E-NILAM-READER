@@ -6,28 +6,27 @@
 
 <ion-content [fullscreen]="true">
   <div class="statisticContainer">
-
+    <div class="statisticStreak">
+      <span>S</span>
+      <span>M</span>
+      <span>T</span>
+      <span>W</span>
+      <span>T</span>
+      <span>F</span>
+      <span>S</span>
+    </div>
   </div>
   <div class="listOfBooksContainer">
-    <span (click)="navigateTo()" class="bookContainer">
+    <span [routerLink]="['/tabs/book-details', book.isbn]" class="bookContainer" *ngFor="let book of books">
       <img class="bookProfile" src="assets/img/book1.webp" alt="">
-      <h1>Title</h1>
-      <p>Author: Authorname</p>
+      <h1>{{book.name}}</h1>
+       <!-- Conditionally display Author if book has an author -->
+       <p *ngIf="book.author">Author: {{book.author}}</p>
     </span>
-    <span class="bookContainer">
-      <img class="bookProfile" src="assets/img/book1.webp" alt="">
-      <h1>Title</h1>
-      <p>Author: Authorname</p>
-    </span>
-    <span class="bookContainer">
-      <img class="bookProfile" src="assets/img/book1.webp" alt="">
-      <h1>Title</h1>
-      <p>Author: Authorname</p>
-    </span>
-    <span class="bookContainer">
-      <img class="bookProfile" src="assets/img/book1.webp" alt="">
-      <h1>Title</h1>
-      <p>Author: Authorname</p>
+    <!-- Separate container for the newly registered book -->
+    <span *ngIf="newlyRegisteredBook" class="newlyRegisteredBookContainer">
+        <h1>{{newlyRegisteredBook.name}}</h1>
+        <p>Author: {{newlyRegisteredBook.author}}</p>
     </span>
   </div>  
 </ion-content>                                                 
